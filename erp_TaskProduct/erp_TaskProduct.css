@@ -1,0 +1,9 @@
+.helptextDiv{
+    display:inline-block; 
+    position:absolute;
+    right:78%;
+}
+.mainClass{
+    overflow-y: scroll !important;
+    height: 200px;
+}

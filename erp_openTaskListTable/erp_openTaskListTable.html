@@ -1,0 +1,57 @@
+<template>
+          <table class="slds-table slds-table_bordered slds-no-row-hover">
+
+                  <thead>
+                      <tr>
+                          <th scope="col">
+                              <div class="slds-truncate" title="lmsJobNumber">LMS Job Number</div>
+                          </th>
+                          <th scope="col">
+                              <div class="slds-truncate" title="customerName">Customer Name</div>
+                          </th>
+                          <th scope="col">
+                              <div class="slds-truncate" title="customerPhone">Customer Phone</div>
+                          </th>
+                          <th scope="col">
+                            <div class="slds-truncate" title="product">Product</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="task">Task</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="age">Age</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="AIS">AIS</div>
+                        </th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <template for:each={taskList} for:item="task">
+                          <tr key={task.Id} class="slds-hint-parent">
+                              <th scope="row">
+                                  <div class="slds-truncate" title="LMS Job Number"><a href="javascript:void(0);">LMS-098900</a></div>
+                              </th>
+                              <td>
+                                  <div class="slds-truncate" title="Customer Name">{task.customerName}</div>
+                              </td>
+                              <td>
+                                  <div class="slds-truncate" title="">+91 989898989</div>
+                              </td>
+                              <td>
+                                <div class="slds-truncate" title="">Dairy Product</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate" title="">Task Name</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate" title="">10 Days</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate" title="">AIS-989898</div>
+                            </td>
+                          </tr> 
+                        </template>                                                                                     
+                  </tbody>
+              </table>
+</template>

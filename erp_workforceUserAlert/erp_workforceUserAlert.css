@@ -1,0 +1,17 @@
+/**
+ * Created by SXK2ZTA on 3/30/21.
+ */
+.textStyle {
+    font-size: 15px;
+    margin-left: 40px;
+}
+
+.reviewClass {
+    margin-left: 53px;
+    font-size: 15px;
+    color: red;
+}
+
+.slds-icon {
+    --sds-c-icon-color-foreground-default: orange;
+}

@@ -1,0 +1,50 @@
+<template>
+    <h1 style="font-weight:bold;" class="slds-p-bottom_xx-small">Districts and Stores</h1>
+    <div class="storeProductContainer slds-box slds-box_xx-small">
+        <div class="storeProductClass">
+            <template if:true={storeProductList}>
+                <template for:each={storeProductList} for:item="district" for:index="dno">
+                    <div key={district.id} class="districtClass">
+                        <lightning-input type="checkbox" label={district.name} name="input1-{district.id}"
+                            value={district.id} checked={district.isChecked} onchange={handleDistrictChange}>
+                        </lightning-input>                        
+                        <span class="slds-m-left_large spanClass" data-name={district.id}>View Store(s) and Product(s)</span>
+                        <lightning-button-icon icon-name="utility:chevrondown"
+                                        class="slds-col_bump-left"
+                                        icon-class="slds-button__icon_hint"
+                                        variant="bare"
+                                        alternative-text="View Store and Product"
+                                        onclick={handleArrow} data-id={district.id}>
+                        </lightning-button-icon>           
+                        <div data-id={district.id} class="slds-hide">
+                            <template for:each={district.stores} for:item="store" for:index="sno">
+                                <div class="storeClass" key={store.id}>
+                                    <lightning-input type="checkbox" label={store.name} name="input1-{store.id}"
+                                        value={store.id} checked={store.isChecked} data-id={district.id} onchange={handleStoreChange}>
+                                    </lightning-input>
+                                </div>
+                                <lightning-layout multiple-rows="false" key={store.id}>
+                                    <template for:each={store.products} for:item="product">
+                                        <div class="productClass" key={product.uniqueId}>
+                                            <lightning-layout-item flexibility="auto" size="3" key={product.uniqueId}>
+                                                <lightning-input type="checkbox" label={product.name} data-id={dno}
+                                                    name="input1-{product.uniqueId}" value={product.uniqueId} data-value={sno}
+                                                    disabled={product.isDisabled} checked={product.isChecked} data-name={product.family}
+                                                    onchange={handleProductChange}>
+                                                </lightning-input>
+                                            </lightning-layout-item>
+                                        </div>
+                                    </template>
+                                </lightning-layout>
+                            </template>
+                        </div>
+                        
+                    </div>
+                </template>
+            </template>
+            <template if:false={dataToDisplay}>
+                No Store Product avaliable for selected Product(s) and Branch.
+            </template>
+        </div>
+    </div>
+</template>

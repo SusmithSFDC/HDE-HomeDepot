@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <isExposed>false</isExposed>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="branchId" label="Branch Id" type="String" role="inputOnly"/>
+            <property name="productIds" label="Product Ids" type="String[]" role="inputOnly"/>
+            <property name="userAssignmentId" label="User Assignment Id" type="String" role="inputOnly"/>
+            <property name="selectedProducts" type="string" label="Selected Store Products" role="outputOnly" description="The Store Products the user has selected"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

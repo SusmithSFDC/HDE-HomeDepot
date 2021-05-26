@@ -1,0 +1,54 @@
+<template>
+    <lightning-card title="Next Task" icon-name="standard:task">
+        <div slot="actions">
+            <lightning-button variant="brand" label="Work Task" title="Work Task" 
+              class="slds-m-left_x-small"></lightning-button>
+        </div>
+
+        <div class="slds-p-around_medium slds-text-align_left slds-border_bottom " style="font-size:larger"><b>Task Details</b></div>
+        <div class="slds-grid" > 
+
+            <div class="slds-col flex-col" >
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">Task Name:</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">Description:</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom "></p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">Customer Order:</p> 
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">Customer Name:</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">Product:</p>
+            </div>
+            <div class="slds-col flex-col">
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">{taskData.taskName}</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">{taskData.description}</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom "></p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">
+               
+                <lightning-formatted-url value={taskData.customerOrderUrl} target="_blank" label={taskData.customerOrderNumber}>
+                </lightning-formatted-url>
+              </p> 
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">{taskData.customerName}</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">{taskData.productName}</p>
+            </div>
+             <div class="slds-col flex-col" >
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">Job Number:</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">LMS Job Number:</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom "></p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">Job Status:</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">Task Age:</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom " >Vendor:</p>
+            </div>
+            <div class="slds-col flex-col">
+                <!--
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">
+              <lightning-formatted-url value={taskData.jobUrl} target="_blank" label={jobNumber}>
+              </lightning-formatted-url></p>
+              -->
+                <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">{taskData.jobNumber}</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">{taskData.lmsJobNumber}</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom "></p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">{taskData.jobStatus}</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">{taskData.taskAge}</p>
+              <p class="slds-p-around_medium slds-text-align_left slds-border_bottom ">{taskData.vendor}</p>
+            </div>
+          </div>
+    </lightning-card>
+</template>

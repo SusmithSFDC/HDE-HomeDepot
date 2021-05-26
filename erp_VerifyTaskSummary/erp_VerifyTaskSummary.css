@@ -1,0 +1,9 @@
+.mainDiv{
+    overflow-y: scroll !important;
+    height: 80px;
+    margin-top: 5px;
+    
+}
+.slds-modal__content {
+    overflow-y: scroll !important;
+}

@@ -1,0 +1,17 @@
+<!--
+ - Created by SXK2ZTA on 3/30/21.
+ -->
+
+<!-- Erp Workforce User Alert -->
+<template>
+    <lightning-card title="User Does not Exist in LMS User Master" icon-name="utility:warning" class="slds-icon">
+        <div class="reviewClass">
+            <h3>Review the error below</h3><br>
+        </div>
+        <div align="slds-grid">
+            <div class="slds-col--padded textStyle">
+                <lightning-formatted-rich-text value={reviewMessage}></lightning-formatted-rich-text>
+            </div>
+        </div>
+    </lightning-card>
+</template>

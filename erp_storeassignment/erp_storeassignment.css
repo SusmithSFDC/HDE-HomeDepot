@@ -1,0 +1,24 @@
+.storeClass{
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.productClass{
+    margin-left: 40px;
+}
+.storeProductClass{
+    margin-left: 0px !important;
+    margin-bottom: 5px;
+}
+.storeProductContainer{
+    overflow-y: scroll !important;
+    height: 200px;
+}
+.districtClass{
+    margin-bottom: 10px;
+}
+.spanClass{
+    color:blue;
+    margin-top: 10px;
+    margin-right: 2px;
+}

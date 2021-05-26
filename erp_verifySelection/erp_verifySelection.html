@@ -1,0 +1,22 @@
+<template>
+	<h1 style="font-weight:bold;" class="slds-p-bottom_xx-small">District:</h1>
+	<div class="mainDiv slds-box slds-box_xx-small">
+		<template if:true={districtRecords}>
+			<template for:each={districtRecords} for:item="district">
+				<template if:true={district.isChecked}>
+					<h1 style="font-weight:bold;" key={district.id}>District Name: {district.name}</h1>
+					<!--<br key={district.id}/>-->
+				</template>
+				<template if:false={district.isChecked}>
+					<template if:true={district.showDistrict}>
+						<h1 style="font-weight:bold;" key={district.id}>District Name: {district.name}</h1> </template>
+				</template>
+				<template for:each={district.stores} for:item="stores">
+					<template if:true={stores.isChecked}>
+						<h1 class="slds-p-left_large" key={stores.id}>{stores.name}: {stores.selectedProducts}</h1>
+					</template>
+				</template>
+			</template>
+		</template>
+	</div>
+</template>

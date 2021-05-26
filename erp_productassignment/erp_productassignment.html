@@ -1,0 +1,15 @@
+<template>
+    <lightning-dual-listbox name="Products" 
+                            label="Select Products" 
+                            source-label="Available" 
+                            selected-label="Selected"
+                            field-level-help="Assign Product" 
+                            options={productOptions} 
+                            value={selectedProducts}
+                            onchange={handleChange}>
+    </lightning-dual-listbox>
+    <div class="slds-m-top_medium slds-float_right">
+        <button class="slds-button slds-button_neutral" onclick={closeModal} title="Cancel">Cancel</button>
+        <button class="slds-button slds-button_brand" onclick={submitDetails} title="OK">Save</button>
+    </div>
+</template>

@@ -1,0 +1,31 @@
+<template>
+    <div class="slds-p-bottom_xx-small" >
+       <h1>
+          Tasks
+          <lightning-helptext class="slds-p-left_large" content="Unselecting a product task will reassign it to the ordering queue.">
+          </lightning-helptext>
+       </h1>
+    </div>
+    <div class="mainClass slds-box slds-box_xx-small">
+      <template if:true={lstTask}>
+         <template for:each={lstTask} for:item="task" for:index="taskIndex">
+            <div key={task.taskName} class="taskClass slds-p-top_small">
+               <lightning-input type="checkbox" label={task.taskName} value={task.taskName} checked={task.isChecked} onchange={handleTaskChange} data-id={taskIndex}>
+               </lightning-input>
+               <template if:true={task.products}>
+                  <lightning-layout multiple-rows="false" key={task.taskName}>
+                     <template for:each={task.products} for:item="product" for:index="prdIndex">
+                        <lightning-layout-item flexibility="auto, no-shrink" size="4" key={product.id}>
+                           <div key={product.id} class="slds-p-left_large">
+                              <lightning-input type="checkbox" label={product.name} value={product.id} checked={product.isChecked} onchange={handleProductChange} data-id={taskIndex} data-value={prdIndex}>
+                              </lightning-input>
+                           </div>
+                        </lightning-layout-item>
+                     </template>
+                  </lightning-layout>
+               </template>    
+            </div>
+         </template>
+      </template>
+   </div>
+ </template>

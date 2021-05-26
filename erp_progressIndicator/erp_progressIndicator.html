@@ -1,0 +1,14 @@
+<template>
+        <lightning-layout class="slds-grid" style="margin-top: 5px;">
+                <lightning-layout-item class="slds-col slds-size_8-of-8">
+                        <template if:true={showStages}>
+                                <lightning-progress-indicator current-step={currentStage} type="base" variant="base">
+                                        <template for:each={stages} for:item="stage">
+                                                <lightning-progress-step style="text-align: center;" key={stage} label={stage} value={stage}></lightning-progress-step>
+                                        </template>
+                                </lightning-progress-indicator>
+                        </template>
+                </lightning-layout-item>
+        </lightning-layout>
+
+</template>

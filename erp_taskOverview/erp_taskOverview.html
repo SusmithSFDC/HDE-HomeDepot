@@ -1,0 +1,29 @@
+<!--
+ - Created by SXK2ZTA on 4/15/21.
+ -->
+
+<!-- Erp Task Overview -->
+<template>
+    <lightning-card title="Task Overview">
+        <div class="slds-is-relative" style="width: auto;">
+            <lightning-tabset active-tab-value="priorityTasks">
+                <lightning-tab label="Priority Tasks" value="priorityTasks">
+                    <template if:true={isLoaded}>
+                        <lightning-spinner alternative-text="Loading..." variant="brand"></lightning-spinner>
+                    </template>
+                    <template if:true={results}>
+                        <lightning-datatable
+                                key-field="Id"
+                                data={results}
+                                columns={columns}
+                                sorted-by={sortBy}
+                                sorted-direction={sortDirection}
+                                onsort={sortColumns}
+                                hide-checkbox-column="true">
+                        </lightning-datatable>
+                    </template>
+                </lightning-tab>
+            </lightning-tabset>
+        </div>
+    </lightning-card>
+</template>
