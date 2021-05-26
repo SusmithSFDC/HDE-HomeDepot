@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="isLastScreen" label="Last Screen" type="boolean" role="inputOnly"/>
+            <property name="isFirstScreen" label="First Screen" type="boolean" role="inputOnly"/>
+            <property name="currentStage" label="Current Stage" type="String" description="Input: List of Flow stages" role="inputOnly"/>
+            <property name="stages" label="Stages" type="String[]" description="Input: List of Flow stages" role="inputOnly"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

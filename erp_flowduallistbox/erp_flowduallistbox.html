@@ -1,0 +1,25 @@
+<template>
+    <div style="height: 250px;overflow: auto;">
+        <lightning-dual-listbox name="Division" 
+                                    source-label={sourceLabel}
+                                    selected-label={selectedLabel}
+                                    options={options} 
+                                    onchange={handleChange}
+                                    value={defaultValue}>
+        </lightning-dual-listbox>
+
+        <div class="slds-m-top_small" style="display: inline-flex; flex-direction: column; width: 32%;">
+            {leftNote}
+        <!-- Note: Remove or add Divisions <br>
+            by selecting Division and using <br>
+            the left or right arrows. -->
+        </div>
+
+        <div class="slds-m-top_small" style="display: inline-flex; flex-direction: column; width: 32%;">
+            {rightNote}
+            <!--Note: Adjust Division priority <br>
+            by selecting Division and using <br>
+            arrows up and down.-->  
+        </div> 
+    </div>
+</template>

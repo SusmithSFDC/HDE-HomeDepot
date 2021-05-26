@@ -1,0 +1,19 @@
+<template>
+    <div class="inlineDiv">
+        <lightning-checkbox-group name="erp_checkboxgroup"
+                                  label={label}
+                                  options={options}
+                                  value={value}
+                                  onchange={handleChange}
+                                  required>
+        </lightning-checkbox-group>
+    </div>
+    <template if:true={showHelptext}>
+        <div class="helptextDiv" >
+            <lightning-helptext content="Due to system requirements, when selecting an Exterior product for the DIM role,
+                                    all Exterior products will be selected.">
+            </lightning-helptext>
+        </div>
+    </template>
+
+</template>

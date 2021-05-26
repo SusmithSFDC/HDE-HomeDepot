@@ -1,0 +1,28 @@
+<template>
+    <lightning-combobox name={comboLabel}
+                        label={comboLabel}
+                        value={value}
+                        placeholder={comboPlaceholder}
+                        options={divOptions}
+                        onchange={handleComboChange} >
+    </lightning-combobox>
+    <!--<div class="slds-box slds-box_x-small">-->
+        <br/>
+        <p>Selected value is: {selectedvalue}</p>
+    <!--</div>-->  
+        <template if:true={show}>
+            <lightning-dual-listbox name="languages"
+                                    label="Select Region"
+                                    source-label="Available"
+                                    selected-label="Selected"
+                                    field-level-help={tolltip}                            
+                                    options={duallistOptions}
+                                    value={selectedreg}
+                                    onchange={handleDuallistChange}>
+            </lightning-dual-listbox>
+        </template>
+        <!--<div class="slds-box" >
+            <p>Selected values are: {selected}</p>
+        </div> -->   
+
+</template>

@@ -1,0 +1,19 @@
+<template>
+    <div class="slds-grid slds-p-around_medium">
+        <div class="slds-m-top_medium slds-col slds-size_6-of-6">
+            <template if:true={showStages}>
+                <tempplate if:true={showPrevious}>
+                    <lightning-button variant="neutral" label={labelPrevious} onclick={handleBack} class="slds-float_left"></lightning-button>
+                </tempplate>
+                <lightning-progress-indicator current-step={currentStage} type="base" variant="base">
+                    <template for:each={stages} for:item="stage">
+                        <lightning-progress-step key={stage} label={stage} value={stage}></lightning-progress-step>
+                    </template>
+                </lightning-progress-indicator>
+                <tempplate if:true={showNext}>
+                    <lightning-button variant="brand" label={labelNext} onclick={handleNext} class="slds-float_right"></lightning-button>
+                </tempplate>
+            </template>
+        </div>
+    </div>
+</template>

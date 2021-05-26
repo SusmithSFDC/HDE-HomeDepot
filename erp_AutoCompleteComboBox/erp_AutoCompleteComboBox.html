@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-col slds-size_6-of-12">
+        <label class="slds-form-element__label" for="input">
+            <template if:true={required}>
+                <abbr class="slds-required" title="required">* </abbr>
+            </template>
+            {label}
+        </label>
+        <div class="slds-form-element__control">
+            <input id="input" name="input" list="valueList" placeholder={placeholder} required={required} class="slds-input" type="text" value={inputValue} onchange={handleChange} onblur={handleChange} />
+            <datalist id="valueList" class="">
+                <template for:each={values} for:item='item'>
+                    <option key={item.value} value={item.label}>{item.label}</option>
+                </template>
+            </datalist>
+        </div>
+    </div>
+</template>

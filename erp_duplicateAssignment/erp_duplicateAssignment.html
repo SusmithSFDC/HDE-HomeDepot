@@ -1,0 +1,28 @@
+<template>
+    <div align="slds-grid">
+        <h3 class="slds-text-heading_medium" style="line-height:3;">
+            <lightning-icon class="slds-m-around_medium" icon-name="utility:warning" variant="warning" size="small"></lightning-icon>
+            Duplicate Assignment
+        </h3>
+        <div class="slds-col--padded">
+            <h3 style="font-size: 14px;">Review the duplicate assignment(s) below.</h3><br>
+            <div class="slds-text-color_weak">
+                <h5 class="slds-m-bottom_xx-small" style="font-size: 12px;">Duplicate Assignment(s)</h5>
+                <div class="mainDiv">
+                    <template for:each={duplicateAssignment} for:item="userAssignment">
+                        <strong key={userAssignment.AssignmentId}>{userAssignment.userName}:</strong>
+                        <template for:each={userAssignment.storeProductMap} for:item="storeProduct">
+                            <div class="slds-p-around_xxx-small p-left" key={storeProduct.key}>{storeProduct.key} -
+                                <i> {storeProduct.value}</i><br>
+                            </div>
+                        </template>
+                        <br key={userAssignment.userAssignmentId}/>
+                    </template>
+                </div>
+            </div>
+            <br/>
+            <h4 style="font-size: 15px;"><strong>If you proceed, you will overwrite the above assignment(s).</strong></h4>
+            <h4 style="font-size: 15px;">If you do not wish to overwrite an assignment, select Previous to go back and edit accordingly.</h4>
+        </div>
+    </div>
+</template>

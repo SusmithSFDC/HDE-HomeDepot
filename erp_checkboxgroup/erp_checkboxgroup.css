@@ -1,0 +1,8 @@
+.inlineDiv{
+    display:inline-block;      
+}
+.helptextDiv{
+    display:inline-block; 
+    position:absolute;
+    right:78%;
+}

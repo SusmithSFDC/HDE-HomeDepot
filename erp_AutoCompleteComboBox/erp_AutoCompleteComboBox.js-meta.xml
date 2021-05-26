@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="options" label="Available Options" type="String" role="inputOnly"/>
+            <property name="label" label="Label" type="String" role="inputOnly"/>
+            <property name="value" label="Selected Value" type="String"/>
+            <property name="selectedBranch" label="Selected Branch" type="String"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

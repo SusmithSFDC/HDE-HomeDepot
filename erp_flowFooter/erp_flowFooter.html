@@ -1,0 +1,21 @@
+<template>
+    <div class="slds-clearfix">
+        <div class="slds-p-top_medium"> 
+            <template if:false={isFirstScreen}>
+                <lightning-button  class="slds-float_left" label="Previous" onclick={handlePrevious} title="Previous">
+                </lightning-button>
+            </template>
+            <template if:false={isLastScreen}>
+                <lightning-button variant="brand" label="Next" onclick={handleNext} title="Next"
+                                  class="slds-float_right">
+                </lightning-button>
+            </template>
+            <template if:true={isLastScreen}>
+                <lightning-button variant="brand" label="Submit" onclick={handleNext}
+                                  title="Submit"  class="slds-float_right">
+                </lightning-button>
+            </template>
+            <c-erp_progress-indicator current-stage={currentStage} stages={stages}></c-erp_progress-indicator>
+        </div>
+    </div>
+</template>

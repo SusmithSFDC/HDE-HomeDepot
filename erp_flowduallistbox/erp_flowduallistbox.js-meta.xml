@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="selectedValuesJSON" label="Selected JSON" type="String[]" />
+            <property name="lblValue" label="Label" type="String" role="inputOnly"/>
+            <property name="sourceLabel" label="Available Label" type="String" role="inputOnly"/>
+            <property name="selectedLabel" label="Selected Label" type="String" role="inputOnly"/>
+            <property name="availableOptions" label="Available Options" type="String" role="inputOnly"/>
+            <property name="selectedValuesLabel" label="Selected Options" type="String" />
+            <property name="leftNote" label="Left Note" type="String" role="inputOnly"/>
+            <property name="rightNote" label="Right Note" type="String" role="inputOnly"/>
+            <property name="defaultValue" label="Default Value" type="String[]" role="inputOnly"/>
+            <property name="isEmptySelectedValues" label="Empty Selected Values" type="boolean" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,17 @@
+<template>
+    <!-- Assigned Branch as part of onload  -->
+
+    <lightning-combobox name="branches" 
+                        label="Select Home Branch" 
+                        placeholder="Choose Branch" 
+                        value={selectedBranch}
+                        onchange={handleChange} 
+                        options={branchOptions}>
+    </lightning-combobox>
+
+    <!--div class="slds-m-top_medium slds-float_right">
+        <button class="slds-button slds-button_neutral" onclick={closeModal} title="Cancel">Cancel</button>
+        <button class="slds-button slds-button_brand" onclick={submitDetails} title="OK">Save</button>
+    </div-->
+
+</template>
