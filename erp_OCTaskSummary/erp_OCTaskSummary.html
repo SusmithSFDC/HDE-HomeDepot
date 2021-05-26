@@ -1,0 +1,12 @@
+<template>
+    <h1 style="font-weight:bold;" class="slds-p-top_xx-small">Task:</h1>
+	    <div class="mainDiv slds-p-bottom_medium slds-box slds-box_x-small" style="height: 60px;overflow: auto;">
+            <template if:true={taskRecords}>
+                <template for:each={taskRecords} for:item="task" >
+                    <p key={task.label}>
+                        {task.label} <br>
+                    </p>
+                </template>
+            </template>
+        </div>
+</template>

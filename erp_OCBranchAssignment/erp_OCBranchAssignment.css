@@ -1,0 +1,14 @@
+.mainClass{
+    height : 200px;
+    overflow-y: scroll;
+    
+}
+.regionClass{
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.branchClass{
+    margin-left: 25px;
+    margin-top: 15px;
+}

@@ -1,0 +1,57 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_3-of-12 slds-large-size_3-of-12">
+
+        </div>
+
+        <div class="slds-col slds-size_6-of-12 slds-large-size_6-of-12">
+            <h1><b>Select Standard Region Priority</b></h1>
+            <br/>
+            <p>Select Division to display Standard Region Priority below.</p>
+            <br/>
+            <lightning-combobox name={comboLabel}
+                                label={comboLabel}
+                                value={value}
+                                placeholder={comboPlaceholder}
+                                options={divOptions}
+                                onchange={handleComboChange} >
+            </lightning-combobox>
+    
+            <template if:true={show}>   
+                <div class="slds-box slds-box_x-small">
+                    <p>Selected value is: {selectedvalue}</p>
+                </div>                  <!--label="Select Region"-->
+                <lightning-dual-listbox name="languages"
+                                        source-label="Remove or Add Region(s)"
+                                        selected-label="Adjust the preselected Region(s) Priority"                                    
+                                        options={duallistOptions}
+                                        value={selectedreg}
+                                        required-options={selectedreg}
+                                        onchange={handleDuallistChange}>
+                </lightning-dual-listbox>
+
+                <div class="slds-m-top_small" style="display: inline-flex; flex-direction: column; width: 35%;">
+                    <!--Note: Remove or add Regions <br>
+                    by selecting Regions and using <br>
+                    the left or right arrows.-->
+                </div>
+            
+                <div class="slds-m-top_small" style="display: inline-flex; flex-direction: column; width: 35%;">
+                    Note: Adjust Division priority <br>
+                    by selecting Division and using <br>
+                    arrows up and down.
+                </div>
+
+            </template>
+        </div>
+
+        <div class="slds-col slds-size_3-of-12 slds-large-size_3-of-12 ">
+            <div class="slds-float_left">
+                <lightning-button-icon icon-name="utility:refresh" onclick={handleRefresh}  alternative-text="Refresh" title="Refresh"></lightning-button-icon>
+            </div>
+        </div>
+    </div>
+        <!--<div class="slds-box" >
+            <p>Selected values are: {selected}</p>
+        </div> -->  
+</template>

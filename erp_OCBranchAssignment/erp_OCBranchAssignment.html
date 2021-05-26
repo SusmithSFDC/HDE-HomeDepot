@@ -1,0 +1,15 @@
+<template>
+    <lightning-dual-listbox name="Branch" 
+                            label={branchLabel} 
+                            source-label="Remove or Add Branch(es)" 
+                            selected-label="Branch(es) Selection" 
+                            options={result} 
+                            onchange={handleChange}>
+    </lightning-dual-listbox>
+
+    <div class="slds-m-top_small" style="display: inline-flex; flex-direction: column; width: 23%;">
+        Note: Remove or add Branches <br>
+        by selecting Branch and using <br>
+        the left or right arrows.
+    </div>
+</template>
